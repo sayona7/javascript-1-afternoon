@@ -36,7 +36,7 @@ let devMountainGoal = null;
 //plus the value of the name parameter.
 
 function greeting(name) {
-  return "Hello " + myName;
+  return "Hello, " + name;
 }
 
 //////////////////PROBLEM 7////////////////////
@@ -44,14 +44,16 @@ function greeting(name) {
 //Write a function expression called newGreeting.
 //Give it the same functionality as the function greeting in Problem 6.
 
-function newGreeting
+ let newGreeting = function(name) {
+   return "Hello, " + name;
+ }
 
 //////////////////PROBLEM 8////////////////////
 
 //Create an array called groceries with the values
 //"apples", "milk", "eggs", "bread"
 
-//Code Here
+let groceries = ["apples", "milk", "eggs", "bread"];
 
 //////////////////PROBLEM 9////////////////////
 
@@ -60,12 +62,17 @@ function newGreeting
 //name (a string), color (a string), age (a number),
 //and goodBoy (a boolean).
 
-//Code Here
+let dog = {
+  name: "Joy",
+  color: "merle",
+  age: 2,
+  goodBoy: false,
+};
 
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
 
-//Code Here
+let devMountainClassPet = dog.name;
 
 //////////////////PROBLEM 10////////////////////
 
@@ -76,7 +83,15 @@ function newGreeting
 // If the name parameter is anything else, return 'Cool name, NAMEPARAM'
 // with NAMEPARAM being the name parameter being passed in (not literally NAMEPARAM)
 
-// Code here
+function nameCheck(name) {
+  if (name === "Steven") {
+    return "What is up Steven?";
+  } else if (name === "Bryan") {
+    return "Hey Bryan!";
+  } else {
+    return "Cool name, " + name;
+  }
+}
 
 //////////////////PROBLEM 11////////////////////
 
@@ -84,12 +99,14 @@ function newGreeting
 // that will be numbers.
 // The add function should return the two parameters added together
 
-//Code Here
+function add(num1, num2) {
+  return num1 + num2;
+}
 
 //Now invoke add, passing in the numbers 3 and 4
 //storing the result in the variable mathSum.
 
-//Code Here
+let mathSum = add(3,4);
 
 //////////////////PROBLEM 12////////////////////
 
@@ -100,7 +117,17 @@ function newGreeting
 // If the passed in color equals 'black', return 'so trendy'
 // Otherwise, you should return the string 'you need to evaluate your favorite color choice'
 
-// Code here
+function faveColorFinder(color) {
+  if (color === "red") {
+    return 'red is a great color';
+  } else if (color === "green") {
+    return 'green is a solid favorite color';
+  } else if (color === "black") {
+    return 'so trendy';
+  } else {
+    return 'you need to evaluate your favorite color choice';
+  }
+}
 
 //////////////////PROBLEM 13////////////////////
 
@@ -124,28 +151,26 @@ function pond() {
 //as strings.
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathroomScope = ["duck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let pondScope = ["duck", "realDuck"];
 
 //////////////////PROBLEM 14////////////////////
 
 //Create a variable called age with your age assigned to you
 
-// Code Here
+let age = 24;
 
 // FLASH FORWARD TO NEXT YEAR
 // reassign the value of age to be one greater than it was, because, we all get older
-
-// Code Here
+age++;
 
 // Good news! We can live forever. Set your age to 999
-
-// Code Here
+age = 999;
